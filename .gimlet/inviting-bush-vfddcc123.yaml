@@ -1,0 +1,17 @@
+app: vfddcc123
+env: inviting-bush
+namespace: default
+chart:
+  repository: https://chart.onechart.dev
+  name: static-site
+  version: 0.70.0
+values:
+  buildScript: |-
+    # !/usr/bin/env bash
+
+    npm install
+    npm run build
+    lscpu
+  gitCloneUrl: https://github.com/Teo4268/H.git
+  gitRepository: Teo4268/H
+  gitSha: '{{ .SHA }}'
